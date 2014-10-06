@@ -52,7 +52,7 @@ function! clang_tags#grep()
 
     if strlen(def) > 0
         let loclist = []
-        let res = clang_tags#do_cmd('grep ' . def)
+        let res = clang_tags#do_cmd('grep \'' . def . '\'')
         let cwd = clang_tags#find_root_dir(getcwd())
         for i in res[1:]
             let t = split(i, ':')
