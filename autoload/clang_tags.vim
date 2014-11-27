@@ -48,7 +48,7 @@ function! clang_tags#get_USR()
 endfunction
 
 function! clang_tags#grep()
-    let def = clang_tags#get_USR()
+    let def = substitute(clang_tags#get_USR(), "\\$", '\\\$', '')
 
     if strlen(def) > 0
         let loclist = []
