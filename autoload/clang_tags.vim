@@ -65,6 +65,6 @@ function! clang_tags#grep()
 endfunction
 
 function! clang_tags#update()
-    clang_tags#do_cmd('update')
+    call clang_tags#do_cmd('update')
 endfunction
 
