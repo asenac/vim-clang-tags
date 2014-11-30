@@ -1,5 +1,5 @@
 function! clang_tags#get_offset()
-    return eval(line2byte(line('.')) + col('.'))
+    return eval(line2byte(line('.')) + col('.')) - 1
 endfunction
 
 function! Strip(input_string)
