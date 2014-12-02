@@ -60,7 +60,13 @@ function! clang_tags#grep()
             call add(loclist, item)
         endfor
         call setloclist(0, loclist)
-        exec "lopen"
+        if len(loclist) > 0
+            exec "lopen"
+        else
+            echom "No results"
+        endif
+    else
+        echom "No symbol"
     endif
 endfunction
 
